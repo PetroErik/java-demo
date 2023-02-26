@@ -1,5 +1,5 @@
-COMPOSE=docker-compose
-DB= $(COMPOSE) exec db
+DOCKER_COMPOSE=docker-compose
+DB= $(COMPOSE_COMPOSE) exec db
 
 
 all: init run ## Build and run application
@@ -7,23 +7,26 @@ all: init run ## Build and run application
 init: destroy pull build ## Setup build environment
 
 build: ## build docker image
-	$(COMPOSE) pull
-	$(COMPOSE) build
+	$(COMPOSE_COMPOSE) pull
+	$(COMPOSE_COMPOSE) build
 
 destroy: ## Destroy containers
-	-$(COMPOSE) stop
-	-$(COMPOSE) rm -f
+	$(COMPOSE_COMPOSE) stop
+	$(COMPOSE_COMPOSE) rm -f
 
 pull:
-	$(COMPOSE) pull
+	$(COMPOSE_COMPOSE) pull
 
 run: ## Run containers in background
-	$(COMPOSE) up -d
+	$(COMPOSE_COMPOSE) up -d
 
 up: ## Run containers
-	$(COMPOSE) up
+	$(COMPOSE_COMPOSE) up
 
 stop: ## Stop containers
-	$(COMPOSE) stop
+	$(COMPOSE_COMPOSE) stop
 
 restart: stop run ## Restart containers
+
+test: ## Run all tests
+	$(DOCKER_COMPOSE) exec app10 ./gradlew clean test
