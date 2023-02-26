@@ -3,7 +3,7 @@ DB= $(DOCKER_COMPOSE) exec db
 
 all: init run ## Build and run application
 
-init: destroy pull build run ## Setup build environment
+init: destroy pull build ## Setup build environment
 
 build: ## build docker image
 	$(DOCKER_COMPOSE) pull
@@ -28,4 +28,4 @@ stop: ## Stop containers
 restart: stop run ## Restart containers
 
 test: ## Run all tests
-	$(DOCKER_COMPOSE) exec app ./gradlew clean test
+	$(DOCKER_COMPOSE) run app /bin/bash -l -c "./gradlew clean test"

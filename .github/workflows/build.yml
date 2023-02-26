@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Init application
-        run: make init
+      - name: Start application
+        run: make all
       - name: Run tests
         run: make test
