@@ -6,7 +6,7 @@ RUN gradle build -x test
 
 RUN mkdir -p /opt/app
 
-COPY /build/libs/demo-0.0.1-SNAPSHOT.jar /opt/app/demo.jar
+COPY build/libs/demo-0.0.1-SNAPSHOT.jar /opt/app/demo.jar
 
 RUN adduser --disabled-password --home /app app
 USER app
