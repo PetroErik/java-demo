@@ -3,7 +3,7 @@ DB= $(DOCKER_COMPOSE) exec db
 
 all: init run ## Build and run application
 
-init: destroy pull build ## Setup build environment
+init: destroy pull build run ## Setup build environment
 
 build: ## build docker image
 	$(DOCKER_COMPOSE) pull
