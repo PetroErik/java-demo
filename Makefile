@@ -29,4 +29,4 @@ stop: ## Stop containers
 restart: stop run ## Restart containers
 
 test: ## Run all tests
-	$(DOCKER_COMPOSE) exec app10 ./gradlew clean test
+	$(DOCKER_COMPOSE) exec app ./gradlew clean test

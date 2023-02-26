@@ -15,4 +15,4 @@ jobs:
       - name: Init application
         run: make init
       - name: Run tests
-        run: docker compose -f docker-compose.yaml -f docker-compose-build.yaml up --abort-on-container-exit
+        run: make test
