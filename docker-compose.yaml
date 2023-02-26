@@ -26,9 +26,8 @@ services:
     ports:
       - "8081:80"
 
-  app6:
+  app:
     build: .
-#    command: java -jar /app.jar
     environment:
       - MYSQL_HOST=db
     ports:

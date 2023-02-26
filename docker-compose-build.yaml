@@ -1,5 +1,5 @@
 version: '3.8'
 
 services:
-  app6:
+  app:
     command: ./gradlew test --info --no-daemon --no-watch-fs
