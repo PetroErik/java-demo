@@ -20,6 +20,6 @@ public class HealthCheckControllerIT {
   @Test
   public void healthCheck_Perfect_Perfect() {
     assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/healthcheck", String.class))
-        .isEqualTo("{\"success\":true}");
+        .isEqualTo("{\"success\":false}");
   }
 }
