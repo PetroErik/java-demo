@@ -33,6 +33,6 @@ This is a simple Spring API to demonstrate experience. Students and courses can 
 | **PUT** /course/{courseId}                               | Update a course                              | :white_check_mark: |
 | **DELETE** /course/{courseId}                            | Delete a course                              | :white_check_mark: |
 | **POST** /register/student/{studentId}/course/{courseId} | Register a student to a course               | :white_check_mark: |
-| **POST** /register/{registerId}                          | Delete a registration                        | :white_check_mark: |
-| **POST** /register/student/{studentId}                   | Delete all registrations by a student        | :white_check_mark: |
-| **POST** /register/course/{courseId}                     | Delete all registrations by a course         | :white_check_mark: |
+| **DELETE** /register/{registerId}                        | Delete a registration                        | :white_check_mark: |
+| **DELETE** /register/student/{studentId}                 | Delete all registrations by a student        | :white_check_mark: |
+| **DELETE** /register/course/{courseId}                   | Delete all registrations by a course         | :white_check_mark: |
